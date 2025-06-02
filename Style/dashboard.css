@@ -1,0 +1,163 @@
+/* Taskify Dashboard Styles */
+        .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        padding: 20px 32px 12px 32px;
+        border-bottom: 1px solid #e5e7eb;
+        }
+
+        .brand {
+        color: #2563eb;
+        font-weight: bold;
+        font-size: 1.4em;
+        letter-spacing: 0.5px;
+        }
+
+        .navbar-right {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        }
+
+        .nav-link {
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 6px 14px;
+        border-radius: 6px;
+        transition: background 0.2s;
+        display: flex;
+        align-items: center;
+        }
+
+        .nav-link.active {
+        background: #f1f5ff;
+        color: #2563eb;
+        }
+
+        .nav-link:hover {
+        background: #f1f5ff;
+        }
+
+        .logout-btn {
+        background: #f3f4f6;
+        color: #222;
+        border: none;
+        border-radius: 6px;
+        padding: 6px 18px;
+        font-weight: 600;
+        cursor: pointer;
+        margin-left: 8px;
+        transition: background 0.2s;
+        }
+
+        .logout-btn:hover {
+        background: #e5e7eb;
+        }
+
+        h1{
+            margin-right: 0%;
+            display: flex;
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .taskboard-controls {
+        display: flex;
+        gap: 8px;
+        justify-content: flex-end;
+        margin-bottom: 16px;
+        }
+
+        .filter-btn,
+        .sort-btn,
+        .new-task-btn {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 6px;
+        background: #fff;
+        color: #333;
+        font-weight: 500;
+        cursor: pointer;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+        transition: background 0.2s;
+        }
+
+        .filter-btn:hover,
+        .sort-btn:hover {
+        background: #f1f3fa;
+        }
+
+        .new-task-btn {
+        background: #2563eb;
+        color: #fff;
+        font-weight: 600;
+        }
+
+        .new-task-btn:hover {
+        background: #1743a3;
+        }
+
+        .dashboard {
+            font-family: Arial, sans-serif;
+            background: #e3e7fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .board {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .column1, .column2, .column3 {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            width: 300px;
+            min-height: 400px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+        }
+        .column1 {
+            border-top: rgb(0, 132, 255) 4px solid;
+        }
+        .column2 {
+            border-top: #ebc048 4px solid;
+        }
+        .column3 {
+            border-top: #17df64 4px solid;
+        }
+        .column h2 {
+            text-align: center;
+            margin-bottom: 16px;
+            color: #333;
+        }
+        .task-todo, .task-progress, .task-done {
+            background: #eeeff1;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .option-button {
+            background: url('https://static.thenounproject.com/png/1409295-200.png') no-repeat center;
+            background-size: cover;
+            border: solid 1px #ccc;
+            border-radius: 50%; 
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            margin-bottom: 25px;
+            align-self: flex-end;
+        }
+        .column-header {
+        display: flex;
+        align-items:flex-start;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        }
+        
+    

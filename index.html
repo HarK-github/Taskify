@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <title >Task Board</title> 
+    <link rel="stylesheet" href="style/dashboard.css">
+    <div class="navbar">   <!-- Navigation bar containing tasks notes profile and logout -->
+  <div class="navbar-left">
+    <span class="brand">Taskify</span>
+  </div>
+  <div class="navbar-right">
+    <a href="#" class="nav-link active">Tasks</a>
+    <a href="#" class="nav-link">Notes</a>
+    <a href="#" class="nav-link">Profile</a>
+    <button class="logout-btn">Logout</button>
+  </div>
+</div>
+
+</head>
+<body>
+
+  <div class="dashboard"> 
+     <h1>My Tasks</h1>
+     <div class="taskboard-controls">  <!-- taskboard control buttons -->
+    <button class="filter-btn">Filter</button>
+    <button class="sort-btn">Sort</button>
+    <button class="new-task-btn">+ New Task</button>
+    </div>
+    <div class="board">
+        <!-- To Do Column -->
+        <div class="column1">
+        <div class="column-header">
+        <h2>To Do</h2>
+        <button class="option-button"></button>
+        </div>
+            <div class="task-todo">Design homepage</div>
+            <div class="task-todo">Write project documentation</div>
+        </div>
+        <!-- In Progress Column -->
+        <div class="column2">
+            <div class="column-header">
+            <h2>In Progress</h2>
+            <button class="option-button"></button>
+            </div>
+            <div class="task-progress">Develop login feature</div>
+        </div>
+        <!-- Done Column -->
+        <div class="column3">
+           <div class="column-header">
+            <h2>Done</h2>
+            <button class="option-button"></button>
+            </div>
+            <div class="task-done">Set up project repository</div>
+        </div>
+    </div>
+  </div>
+   
+</body>
+</html>
