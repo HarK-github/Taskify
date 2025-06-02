@@ -1,5 +1,7 @@
 # Taskify App
 
+## Figma design :
+[Clink on this link](https://www.figma.com/design/bHAeJU7u9dCuDDhY8H0V2Y/Untitled?node-id=0-1&t=zWdzjA3DKHBb5EdN-1 )
 # FILE STRUCTURE
 Stricly Adhere to the order
 
