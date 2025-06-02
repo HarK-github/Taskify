@@ -57,19 +57,24 @@
         background: #e5e7eb;
         }
 
-        h1{
-            margin-right: 0%;
-            display: flex;
+        h1{ 
+            padding: 0;
             color: #333;
             font-size: 2.5em;
-            margin-bottom: 20px;
         }
         .taskboard-controls {
         display: flex;
         gap: 8px;
         justify-content: flex-end;
-        margin-bottom: 16px;
+        margin-bottom :20px;
         }
+       .dashboard-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding: 20px 32px 0 32px; /* Add horizontal padding here if you want spacing */
+    }
 
         .filter-btn,
         .sort-btn,
@@ -84,8 +89,17 @@
         box-shadow: 0 1px 2px rgba(0,0,0,0.04);
         transition: background 0.2s;
         }
+        .icon-bg {
+        align-items: center;
+        justify-content: center;
+        background:white;
+        border-radius: 50%;
+        width: 28px;   /* Adjust size as needed */
+        height: 28px;
+        transition: background 0.2s;
+        }
 
-        .filter-btn:hover,
+        .filter-btn:hover,.icon-bg,
         .sort-btn:hover {
         background: #f1f3fa;
         }
@@ -99,12 +113,19 @@
         .new-task-btn:hover {
         background: #1743a3;
         }
-
+       .icon {
+        width: 16px;
+        height: 18px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 8px;
+        vertical-align: middle;
+        }
         .dashboard {
             font-family: Arial, sans-serif;
             background: #e3e7fa;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
         .board {
             display: flex;
@@ -160,4 +181,68 @@
         margin-bottom: 16px;
         }
         
-    
+    /*for small screens*/
+        @media (max-width: 600px) {
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 16px 10px 8px 10px;
+        }
+        .navbar-right {
+            flex-direction: column;
+            width: 100%;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .dashboard-header {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 16px 10px 0 10px;
+            gap: 12px;
+        }
+        .taskboard-controls {
+            width: 100%;
+            justify-content: flex-start;
+            gap: 8px;
+        }
+        .board {
+            flex-direction: column;
+            gap: 12px;
+            padding: 0 6px;
+        }
+        .column1, .column2, .column3 {
+            width: 100%;
+            min-width: 0;
+            margin-bottom: 8px;
+            padding: 12px 8px;
+        }
+        h1 {
+            font-size: 1.4em;
+        }
+        .nav-link, .logout-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            width: 100%;
+            padding: 10px 0;
+            justify-content: flex-start;
+            display: flex;
+        }
+        .icon {
+            width: 18px;
+            height: 18px;
+            margin-right: 6px;
+        }
+        }
+
+
+        @media (max-width: 400px) {
+        .filter-btn, .sort-btn, .new-task-btn {
+            padding: 10px 8px;
+            font-size: 1em;
+        }
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
+        }
