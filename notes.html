@@ -55,22 +55,5 @@
 
     </section>
   </main>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const deleteButtons = document.querySelectorAll(".note button");
-  
-      deleteButtons.forEach(function (button) {
-        button.addEventListener("click", function () {
-          const confirmDelete = confirm("Are you sure you want to delete this note?");
-          if (confirmDelete) {
-            const note = button.closest(".note");
-            if (note) {
-              note.remove();
-            }
-          }
-        });
-      });
-    });
-  </script>
 </body>
 </html>
