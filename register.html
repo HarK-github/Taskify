@@ -25,6 +25,60 @@
         <input class="submit-form"  type="submit" value="Register">
         </form>
         </div>
+        <script>
+          const form = document.getElementById('register-form');
+          const email = document.getElementById('email');
+          const password = document.getElementById('password');
+          const confirmPassword = document.getElementById('confirm-password');
+        
+          // Helper to create/show error messages
+          function showError(input, message) {
+            let error = input.nextElementSibling;
+            if (!error || !error.classList.contains('error')) {
+              error = document.createElement('div');
+              error.className = 'error';
+              error.style.color = 'red';
+              error.style.fontSize = '0.9rem';
+              input.parentNode.insertBefore(error, input.nextSibling);
+            }
+            error.textContent = message;
+          }
+        
+          function clearError(input) {
+            const error = input.nextElementSibling;
+            if (error && error.classList.contains('error')) {
+              error.remove();
+            }
+          }
+        
+          form.addEventListener('submit', function (e) {
+            let valid = true;
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            clearError(email);
+            if (!emailRegex.test(email.value)) {
+              showError(email, 'Please enter a valid email address.');
+              valid = false;
+            }
+        
+            // Password length validation
+            clearError(password);
+            if (password.value.length < 8) {
+              showError(password, 'Password must be at least 8 characters long.');
+              valid = false;
+            }
+        
+            // Confirm password match
+            clearError(confirmPassword);
+            if (password.value !== confirmPassword.value) {
+              showError(confirmPassword, 'Passwords do not match.');
+              valid = false;
+            }
+        
+            if (!valid) e.preventDefault();
+          });
+        </script>
   </body>
   </html>
 
