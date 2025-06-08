@@ -23,6 +23,51 @@
       <button type="submit">Sign in</button>
     </form>
   </div>
+  <script>
+    const loginForm = document.querySelector('.login-form');
+    const emailInput = loginForm.querySelector('input[type="email"]');
+    const passwordInput = loginForm.querySelector('input[type="password"]');
+  
+    function showError(input, message) {
+      let error = input.nextElementSibling;
+      if (!error || !error.classList.contains('error')) {
+        error = document.createElement('div');
+        error.className = 'error';
+        error.style.color = 'red';
+        error.style.fontSize = '0.9rem';
+        input.parentNode.insertBefore(error, input.nextSibling);
+      }
+      error.textContent = message;
+    }
+  
+    function clearError(input) {
+      const error = input.nextElementSibling;
+      if (error && error.classList.contains('error')) {
+        error.remove();
+      }
+    }
+  
+    loginForm.addEventListener('submit', function (e) {
+      let valid = true;
+  
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      clearError(emailInput);
+      if (!emailRegex.test(emailInput.value)) {
+        showError(emailInput, 'Please enter a valid email address.');
+        valid = false;
+      }
+  
+      // Password validation
+      clearError(passwordInput);
+      if (passwordInput.value.length < 8) {
+        showError(passwordInput, 'Password must be at least 8 characters long.');
+        valid = false;
+      }
+  
+      if (!valid) e.preventDefault();
+    });
+  </script>
 </body>
 </html>
 
