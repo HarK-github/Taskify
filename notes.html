@@ -55,6 +55,15 @@
 
     </section>
   </main>
-  
+  <script>
+    // Confirm before deleting a note
+    document.querySelectorAll('.note button').forEach(button => {
+      button.addEventListener('click', function () {
+        if (confirm('Are you sure you want to delete this note?')) {
+          this.closest('.note').remove();
+        }
+      });
+    });
+  </script>
 </body>
 </html>
