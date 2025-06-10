@@ -5,6 +5,7 @@
 
     <title >Profile Page</title> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style/footer.css">
 <style>
   .profile-container {
     max-width: 800px;
@@ -301,5 +302,11 @@ h3{
         </form>
     </div>
 </div>
+<div id="footer"></div>
+<script>
+    fetch('footer.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('footer').innerHTML = data);
+  </script>
 </body>
 </html>
