@@ -23,6 +23,7 @@
       <button type="submit">Sign in</button>
     </form>
   </div>
+ <div id="footer"></div>
   <script>
     const loginForm = document.querySelector('.login-form');
     const emailInput = loginForm.querySelector('input[type="email"]');
@@ -67,7 +68,12 @@
   
       if (!valid) e.preventDefault();
     });
+     fetch('footer.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('footer').innerHTML = data);
+    
   </script>
+
 </body>
 </html>
 

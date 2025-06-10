@@ -5,6 +5,7 @@
 
     <title >TaskBoard</title> 
     <link rel="stylesheet" href="style/dashboard.css">
+    <link rel="stylesheet" href="style/footer.css">
    <div class="navbar">
   <span class="brand">Taskify</span>
   <div class="navbar-right">
@@ -100,6 +101,15 @@
         </div>
     </div>
   </div>
+
+  <div id="footer"></div>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('footer').innerHTML = data);
+</script>
+
+
    
 </body>
 </html>

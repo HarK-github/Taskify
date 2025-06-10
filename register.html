@@ -25,6 +25,7 @@
         <input class="submit-form"  type="submit" value="Register">
         </form>
         </div>
+        <div id="footer"></div>
         <script>
           const form = document.getElementById('register-form');
           const email = document.getElementById('email');
@@ -78,6 +79,9 @@
         
             if (!valid) e.preventDefault();
           });
+          fetch('footer.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('footer').innerHTML = data);
         </script>
   </body>
   </html>
