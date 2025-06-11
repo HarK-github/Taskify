@@ -5,7 +5,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
   }
   
   .container {
@@ -13,7 +15,7 @@ body {
     width: 100%;
     max-width: 360px;
     padding: 20px;
-    transform: scale(1.7);
+    
   }
   
   .title {
@@ -52,7 +54,7 @@ body {
     padding: 12px;
     margin-bottom: 12px;
     border: 1px solid #d1d5db;
-    border-radius: 6px;
+    border-radius: 0px;
     font-size: 14px;
     box-sizing: border-box;
   }
@@ -83,7 +85,7 @@ body {
     background-color: #2563eb;
     color: white;
     border: none;
-    border-radius: 6px;
+    
     font-size: 16px;
     cursor: pointer;
   }
@@ -91,4 +93,53 @@ body {
   button:hover {
     background-color: #1e40af;
   }
+  footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  z-index: 1000;
+}
+
+footer nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+footer nav ul li a {
+  color: #ffa500;
+  text-decoration: none;
+}
+
+footer nav ul li a:hover {
+  text-decoration: underline;
+}
+
+
+  @media (max-width: 480px) {
+    .title {
+      font-size:26px;
+    }
+    .subtitle {
+      font-size: 20px;
+  }
+    .container {
+      padding: 16px;
+  }
+}
+
   
+
+
+
+
+
+
