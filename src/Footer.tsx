@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
     </ul>
   </nav>
 </footer>
-  );
+);
 };
 
 export default Footer;
