@@ -1,0 +1,206 @@
+ 
+ *{
+    margin:0;
+    padding:0;
+    text-align: left;
+ }
+ .profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fffefe;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.myprofile {
+    margin: 32px auto 16px auto;
+    text-align: left;
+    font-size: 40px;
+    color: #131416;
+    font-weight: bold;
+}
+
+.navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        padding: 20px 32px 12px 32px;
+        border-bottom: 1px solid #e5e7eb;
+        }
+
+    .brand {
+        color: #2563eb;
+        font-weight: bold;
+        font-size: 1.4em;
+        letter-spacing: 0.5px;
+        }
+
+    .navbar-right {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        }
+
+    .nav-link {
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 6px 14px;
+        border-radius: 6px;
+        transition: background 0.2s;
+        display: flex;
+        align-items: center;
+        }
+
+    .nav-link.active {
+        background: #f1f5ff;
+        color: #2563eb;
+        }
+
+    .nav-link:hover {
+        background: #f1f5ff;
+        }
+
+    .logout-btn {
+        background: #f3f4f6;
+        color: #222;
+        border: none;
+        border-radius: 6px;
+        padding: 6px 18px;
+        font-weight: 600;
+        cursor: pointer;
+        margin-left: 8px;
+        transition: background 0.2s;
+        }
+
+    .logout-btn:hover {
+        background: #e5e7eb;
+        }
+    button.edit-btn{
+        background-color: #0066cc;
+            color: white;
+            border: none;
+            width: 120px;
+            padding : 10px 15px;
+            border-radius : 4px;
+            cursor: pointer;
+    }
+    .editing{
+      display: flex;
+        justify-content: space between;
+        flex-direction: row;
+        gap:400px;
+
+    }
+    h2{
+        color: #000000;
+        font-size: 30px ;
+    }
+    .uid{
+        color: #3f3f3f;
+        font-size: 25px ;
+
+    }
+    .eid{
+      color: #3f3f3f;
+      font-size: 20px ;
+    }
+    .user-btn{
+        background-color: #b5d7f9;
+            color: rgb(40, 69, 237);
+            border: none;
+            width: 75px;
+            padding : 10px 15px;
+            border-radius : 20px;
+            cursor: pointer;;
+    }
+ .input-group {
+  position: relative;
+  width: 250px;
+}
+
+/* Lock icon styling */
+.input-group i {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #9ca3af; /* light grey-blue */
+  font-size: 14px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 10px 10px 35px; /* space for icon */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+h3{
+    color: #000000;
+    font-size: 25px ;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+            
+    .submit-btn{
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            width: 200px;
+            padding : 10px 15px;
+            border-radius : 4px;
+            cursor: pointer;
+            font-weight: bold;
+    }
+     .labels1 {
+  display: flex;
+  justify-content:  flex-start;
+  gap: 480px;
+}
+    .password-change1 {
+  display: flex;
+  justify-content: flex-start;
+  gap: 465px;
+  margin-bottom: 20px;
+}
+    .labels {
+  display: flex;
+  justify-content: flex-start;
+  padding-right: 0px;
+  margin-bottom: 6px;
+  font-size: 18px;
+  gap: 420px;
+  color: #374151;
+}
+    .password-change {
+  display: flex;
+  justify-content: flex-start;
+  gap: 310px;
+  margin-bottom: 20px;
+}
+   .c-password, .n-password {
+  width: 100%;
+  padding: 10px 12px 10px 36px; /* left padding for icon */
+  border: 1px solid #e5e7eb;  /* light grey border */
+  border-radius: 6px;
+  font-size: 14px;
+  color: #4b5563;  /* dark grey text */
+  background-color: #f9fafb;
+  box-sizing: border-box;
+}
+
+/* Placeholder styling (optional if not defaulting well) */
+.c-password::placeholder,
+.n-password::placeholder {
+  color: #9ca3af;  /* light grey */
+}
+        @media (max-width: 768px) {
+    .labels, .password-change {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

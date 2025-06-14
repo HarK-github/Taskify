@@ -1,24 +1,75 @@
 footer {
-  background: #222;
-  color: #fff;
+  background: #1e1e1e;
+  color: #eee;
   text-align: center;
-  padding: 20px 0;
-  flex-shrink: 0;
-  position: relative;     
-  margin-top: 40px;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-top: 1px solid #333;
+  margin-top: 60px;
 }
+
+footer p {
+  text-align: center;
+  margin: 0 auto 20px auto;
+  font-size: 14px;
+  color: #ccc;
+  width: 100%;
+}
+
+
+footer nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* Horizontally center nav content */
+  justify-content: center;
+}
+
+footer nav strong {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 footer nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   padding: 0;
-  margin: 10px 0 0 0;
+  margin: 0;
+  flex-wrap: wrap;
 }
+
+footer nav ul li {
+  text-align: center;  /* Ensures each link is centered in its own space */
+}
+
 footer nav ul li a {
   color: #ffa500;
   text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
 }
+
+footer nav ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ffa500;
+  transition: width 0.3s ease;
+  margin: 4px auto 0 auto;
+}
+
 footer nav ul li a:hover {
-  text-decoration: underline;
+  color: #ffd700;
+}
+
+footer nav ul li a:hover::after {
+  width: 100%;
 }
