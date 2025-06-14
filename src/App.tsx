@@ -11,7 +11,7 @@ function App() {
     <>
     <div>
       <Profile/>
-      <Footer/>
+      <Footer />
     </div>
     </>
   )
