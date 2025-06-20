@@ -13,12 +13,15 @@ footer p {
   font-size: 14px;
   margin-bottom: 20px;
   color: #ccc;
+  background-color: #1e1e1e;
   padding-top: 5px;
 }
 
 
 footer nav {
   display: flex;
+  color:#ccc;
+  background-color: #1e1e1e;
   flex-direction: column;
   align-items: center;   /* Horizontally center nav content */
   justify-content: center;
@@ -28,6 +31,7 @@ footer nav strong {
   font-size: 16px;
   font-weight: 600;
   color: #fff;
+  background-color: #1e1e1e;
   margin-bottom: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -37,6 +41,7 @@ footer nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
+  background-color: #1e1e1e;
   gap: 30px;
   padding: 0;
   margin: 0;
@@ -44,11 +49,13 @@ footer nav ul {
 }
 
 footer nav ul li {
-  text-align: center;  /* Ensures each link is centered in its own space */
+  text-align: center; 
+  background-color: #1e1e1e; /* Ensures each link is centered in its own space */
 }
 
 footer nav ul li a {
   color: #8a2be2;
+  background-color: #1e1e1e;
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;

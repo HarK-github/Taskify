@@ -5,15 +5,18 @@ import "../htmlImplementation/style/profile.css";
 import Profile from './Profile';
 import Footer from './Footer';
 
+
+
 function App() {
 
   return (
     <>
     <div>
-      <Profile/>
-      <Footer />
+    <Profile/>
+    <Footer />
     </div>
-    </>
+      </>
+      
   )
 }
 

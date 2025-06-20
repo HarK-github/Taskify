@@ -2,8 +2,16 @@ import React from 'react';
 import { useState } from 'react';
 
 const Profile: React.FC = () => {
+  
   const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
+  const [popup, setpopup]=useState(false);
+  const [profileData,setProfileData]=useState({
+    fullname: 'John Doe',
+    Username:'@johndoe',
+    email:'john.doe@example.com'
+  })
+  const[originalData,setoriginalData]=useState({...profileData})
   const handleSubmit = (e: React.FormEvent) => {
   e.preventDefault();
 
@@ -100,13 +108,13 @@ const Profile: React.FC = () => {
     <hr/>
 
     <div>
-        <h2>John Doe</h2>
+        <h2>{profileData.fullname}</h2>
         <br/> 
-        <p className="uid">@johndoe</p>
+        <p className="uid">{profileData.Username}</p>
         <br/>
         <div className="editing">
-        <p className="eid"><i className="fas fa-envelope"></i> john.doe@example.com</p>
-        <button className="edit-btn">Edit Profile</button>
+        <p className="eid"><i className="fas fa-envelope"></i> {profileData.email}</p>
+        <button className="edit-btn" onClick={() => setpopup(true)}>Edit Profile</button>
         </div>
         <br/>
         <button className="user-btn">User</button>
@@ -117,7 +125,7 @@ const Profile: React.FC = () => {
         <h3>Personal Information</h3>
       <div>
   <p style={{ color: "#9ca3af", fontSize: "17px" }}>Full name</p>
-  <p style={{ color: "#000000",fontSize: "20px" }}>John Doe</p>
+  <p style={{ color: "#000000",fontSize: "20px" }}>{profileData.fullname}</p>
 </div><br/>
 
 <div className="labels1">
@@ -126,8 +134,8 @@ const Profile: React.FC = () => {
 </div>
 
 <div className="password-change1">
-  <p style={{ color: "#000000", fontSize: "20px" }}>@johndoe</p>
-  <p style={{color: "#000000", fontSize: "20px" }}>john.doe@example.com</p>
+  <p style={{ color: "#000000", fontSize: "20px" }}>{profileData.Username}</p>
+  <p style={{color: "#000000", fontSize: "20px" }}>{profileData.email}</p>
 </div>
 
     </div >
@@ -173,6 +181,58 @@ const Profile: React.FC = () => {
     </button>
   </form>
 </div>
+{popup && (
+  <div className="modal-backdrop">
+    <div className="modal-box">
+      <h3>Edit Profile</h3>
+
+      <label htmlFor="fullName" className="modal-label">Full Name</label>
+      <input
+        id="fullName"
+        type="text"
+        value={profileData.fullname}
+        onChange={(e) => setProfileData({ ...profileData, fullname: e.target.value })}
+        placeholder="Enter full name"
+        className="modal-input"
+      />
+
+      <label htmlFor="username" className="modal-label">Username</label>
+      <input
+        id="username"
+        type="text"
+        value={profileData.Username}
+        onChange={(e) => setProfileData({ ...profileData, Username: e.target.value })}
+        placeholder="Enter username"
+        className="modal-input"
+      />
+
+      <label htmlFor="email" className="modal-label">Email</label>
+      <input
+        id="email"
+        type="email"
+        value={profileData.email}
+        onChange={(e) => setProfileData({ ...profileData, email: e.target.value })}
+        placeholder="Enter email"
+        className="modal-input"
+      />
+
+      <div className="modal-actions">
+        <button className="cancel-btn" onClick={() => {
+          setpopup(false);
+          setProfileData({ ...originalData });
+        }}>Cancel</button>
+        <button className="save-btn" onClick={() => {
+          alert('Profile updated!');
+          setpopup(false);
+          setoriginalData({...profileData});
+        }}>
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+
 
 </div>
 );
