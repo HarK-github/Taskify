@@ -165,8 +165,5 @@ export default tseslint.config({
 
 ---
 
-## 👨‍💼 Maintained by: Community Contributors
-
-Pull requests are welcome! Make sure to follow all guidelines for successful contributions.
-
+## 👨‍💼 Maintained by: Community Contributors ( ONLY MEMBERS of the DEVLABS 2025 REACT Team 1
 ---
