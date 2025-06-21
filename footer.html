@@ -1,17 +1,65 @@
 <!-- footer.html -->
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <div class="heading-window">
+  <b>New Task</b>
+  <button class="cross"><b>x</b></button>
+  </div>
+</head>
+<body>
+<div class="title ">
+<form action="/action_page.php">
+  <label for="title-name">Title:</label><br>
+  <input type="text" class="title-name" id="title-name" name="title-name"><br>
+ </form> 
+</div>
+<div class="description">
+<form action="/action_page.php">
+  <label for="description">Description:</label><br>
+  <input type="text" class="description-" id="description" name="description"><br>
+ </form> 
+</div>
+</body>
 
-
-<footer>
-  <p>&copy; 2025 by Openlake Devlabs. All rights reserved.</p>
-  <nav>
-    <strong>Related Links</strong>
-    <ul>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="privacy.html">Privacy Policy</a></li>
-    </ul>
-  </nav>
-</footer>
 </html>
+
+
+
+
+
+
+
+<style>
+.heading-window{
+  border: 1px solid #272626;
+  border-radius: 10px;
+  width: 400px;
+  padding: 30px 20px 30px 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.cross{
+  font-size: large;
+  border: none;
+  background-color: rgb(255, 254, 254);
+  padding-left: 300px;
+  opacity: 20%;
+  transition-duration: 0.5s;
+}
+.cross:hover{
+opacity: 100%;
+cursor: pointer;
+}
+.title{
+  padding: 40px 20px 0 ;
+  width:
+}
+.title-name,.description-{
+  width: 300px;
+  height: 30px;
+  border: solid 1px;
+  border-radius: 5px;
+}
+
+
+</style>
