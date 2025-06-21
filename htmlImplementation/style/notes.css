@@ -1,0 +1,81 @@
+* {
+  font-family: var(--font-primary);
+}
+
+html, body {
+  background-color: var(--bg-overlay);
+  color: var(--text-main);
+}
+
+header {
+  background-color: #ffffff;
+}
+
+h1 {
+  color: var(--color-primary);
+  font-family: var(--font-alt);
+}
+
+nav a {
+  color: var(--text-secondary);
+}
+
+nav a:hover {
+  background-color: var(--dash-hover-bg);
+}
+
+nav button {
+  background-color: var(--bg-overlay);
+  color: var(--text-main);
+}
+
+h2, h3 {
+  font-family: var(--font-primary);
+  color: var(--text-main);
+}
+
+.subsection button,
+section button {
+  background-color: var(--color-primary);
+  color: #fff;
+  font-family: var(--font-alt);
+}
+
+.subsection button:hover,
+section button:hover {
+  background-color: var(--dash-btn-hover);
+}
+
+input {
+  font-family: var(--font-primary);
+  color: var(--text-main);
+  border-color: var(--dash-border-light);
+}
+
+::placeholder {
+  color: var(--text-secondary);
+}
+
+.note {
+  background-color: #ffffff;
+  border: 2px solid var(--dash-border-light);
+  color: var(--text-main);
+}
+
+footer {
+  background: #222;
+  color: var(--text-secondary);
+}
+
+footer nav ul li a {
+  color: var(--color-primary);
+}
+
+footer nav ul li a:hover {
+  text-decoration: underline;
+}
+
+p {
+  color: var(--text-secondary);
+  font-family: var(--font-primary);
+}

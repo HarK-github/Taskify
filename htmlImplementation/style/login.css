@@ -1,0 +1,52 @@
+
+body {
+  font-family: var(--font-primary);
+  color: var(--text-main);
+}
+
+.title {
+  font-family: var(--font-primary);
+  color: var(--text-main);
+}
+
+.subtitle {
+  font-family: var(--font-alt);
+  color: var(--text-secondary);
+}
+
+.register-text {
+  color: var(--text-secondary);
+}
+
+.register-text a {
+  color: var(--color-primary);
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  font-family: var(--font-primary);
+  color: var(--text-main);
+  border-color: #d1d5db; 
+}
+
+.forgot {
+  color: var(--color-primary);
+}
+
+button {
+  font-family: var(--font-alt);
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+button:hover {
+  background-color: var(--dash-btn-hover);
+}
+
+footer {
+  color: var(--text-secondary);
+}
+
+footer nav ul li a {
+  color: var(--color-primary);
+}

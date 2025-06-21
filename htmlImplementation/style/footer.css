@@ -1,5 +1,5 @@
 footer {
-  background: #222;
+  background: rgba(255, 255, 255, 0.85);
   color: #fff;
   text-align: center;
   padding: 20px 0;
@@ -16,7 +16,7 @@ footer nav ul {
   margin: 10px 0 0 0;
 }
 footer nav ul li a {
-  color: #ffa500;
+  color: #8a2be2;
   text-decoration: none;
 }
 footer nav ul li a:hover {
