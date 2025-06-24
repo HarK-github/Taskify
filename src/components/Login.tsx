@@ -1,32 +1,45 @@
 import React, { useState } from 'react';
-import { useAuth } from '../context/AuthContext';
-import '../styles/login.css';
+import '../../htmlImplementation/style/login.css';
 
 const Login: React.FC = () => {
-  const { login } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [remember, setRemember] = useState(false);
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+    setLoading(true);
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      setError('Please enter a valid email address.');
-      return;
-    }
+    try {
+      const response = await fetch('http://localhost:5000/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include', 
+        body: JSON.stringify({ email, password }),
+      });
 
-    if (password.length < 8) {
-      setError('Password must be at least 8 characters long.');
-      return;
-    }
+      const data = await response.json();
 
-    const success = await login(email, password);
-    if (!success) {
-      setError('Invalid credentials.');
+      if (!response.ok) {
+        throw new Error(data.message || 'Login failed');
+      }
+
+
+      alert('Login successful!');
+
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError('An unknown error occurred.');
+      }
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -64,7 +77,9 @@ const Login: React.FC = () => {
           <a href="/" className="forgot">Forgot your password?</a>
         </div>
         {error && <div className="error" style={{ color: 'red' }}>{error}</div>}
-        <button type="submit">Sign in</button>
+        <button type="submit" disabled={loading}>
+          {loading ? 'Signing in...' : 'Sign in'}
+        </button>
       </form>
     </div>
   );
