@@ -1,22 +1,25 @@
 import { useState } from 'react'
 import Register from './Register.tsx'
 import './App.css'
-import '@fortawesome/fontawesome-free/css/all.min.css';
+// import '@fortawesome/fontawesome-free/css/all.min.css';
 import "../htmlImplementation/style/profile.css";
-import Profile from './Profile';
-import Footer from './Footer';
+// import Profile from './Profile';
+// import Footer from './Footer';
+import Login from './components/Login';
 
-function App() {
-
+ 
+const App: React.FC = () => {
   return (
     <>
-    <div>
-    <Profile/>
-    <Footer />
-    </div>
+    
+    {/* <Profile/>
+    <Footer /> */}
+    <Login />
+    
       </>
       
   )
 }
 
-export default App
+
+export default App;

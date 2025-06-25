@@ -1,52 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  font-family: var(--font-primary);
-  color: var(--text-main);
+  font-family: 'Open Sans', sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -50px;
 }
 
 .title {
-  font-family: var(--font-primary);
-  color: var(--text-main);
+  font-size: 36px;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 14px;
 }
 
 .subtitle {
-  font-family: var(--font-alt);
-  color: var(--text-secondary);
+  font-size: 30px;
+  font-weight: 600;
+  color: #1d2129;
+  margin-bottom: 6px;
+  margin-top: 4px;
 }
 
 .register-text {
-  color: var(--text-secondary);
+  font-size: 14px;
+  margin-bottom: 24px;
+  color: #6b7280;
 }
 
 .register-text a {
-  color: var(--color-primary);
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .login-form input[type="email"],
 .login-form input[type="password"] {
-  font-family: var(--font-primary);
-  color: var(--text-main);
-  border-color: #d1d5db; 
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 6px;
+  color: #182434;
+  gap: 5rem;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .forgot {
-  color: var(--color-primary);
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 700;
 }
 
-button {
-  font-family: var(--font-alt);
-  background-color: var(--color-primary);
-  color: #ffffff;
+.forgot:hover {
+  text-decoration: underline;
 }
 
-button:hover {
-  background-color: var(--dash-btn-hover);
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 12px;
+  cursor: pointer;
 }
 
-footer {
-  color: var(--text-secondary);
+.login-form button:hover {
+  background-color: #1e40af;
 }
 
-footer nav ul li a {
-  color: var(--color-primary);
+.error {
+  color: red;
+  font-size: 13px;
+  text-align: left;
+  margin-top: -10px;
 }
