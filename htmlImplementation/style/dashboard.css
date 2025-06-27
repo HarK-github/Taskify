@@ -7,7 +7,7 @@
   --font-mono: 'Courier New', monospace;
 
   /* Theme Colors */
-  --color-primary: #8a2be2;
+  --color-primary: #1d31cf;
   --bg-overlay: rgba(255, 255, 255, 0.85);
   --text-main: #1a1a1a;
   --text-secondary: #4a4a4a;
@@ -16,8 +16,8 @@
   --dash-bg: #e3e7fa;
   --dash-border-light: #e5e7eb;
   --dash-hover-bg: #f1f5ff;
-  --dash-btn-bg: #2563eb;
-  --dash-btn-hover: #1743a3;
+  --dash-btn-bg: #2bb3d5;
+  --dash-btn-hover: #25a8d0;
   --task-bg: #eeeff1;
 }
 
