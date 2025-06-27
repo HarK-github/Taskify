@@ -1,10 +1,13 @@
 
-
-
 .new{
-    background-color: rgb(4, 106, 189);
+    background-color: rgb(4, 19, 189);
     color: aliceblue;
     margin-bottom: 30px;
+ margin-top: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
     
 
 }
@@ -57,7 +60,9 @@ background-color: transparent;
 .alltab{
     background-color:whitesmoke;
     display: flow-root;
-    margin-bottom: 9px;
+    margin-bottom: 18px;
+    margin-top: -10px;
+    padding: 10px;
 }
    
 .logout{
@@ -68,6 +73,8 @@ margin-left: -70px;
 font-size: 20px;
 position: relative;
 left:75px ;
+padding: 10px;
+border: none;
 
 }
 .logout:hover{
@@ -128,8 +135,8 @@ li a:hover{
     position: relative;
     border: 2px solid hsla(0, 2%, 83%, 0.225);
     border-radius: 7px;
-     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25)
-    
+     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+     
 }
 .card1{
     background-color: whitesmoke;
@@ -146,7 +153,7 @@ li a:hover{
 .delete{
     position:absolute;
     left: 83%;
-    bottom: 0px;
+    bottom:8px;
     background-color: transparent;
      border:none;
      outline: none;
@@ -165,7 +172,7 @@ li a:hover{
     background-color: hsl(40, 8%, 92%);
    display: flow-root;
     padding: 30px;
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
     margin: 0;
 }
