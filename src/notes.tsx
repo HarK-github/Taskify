@@ -1,15 +1,12 @@
 import React,{useState} from 'react'
-//import '../htmlImplementation/style/notes.css'
+
 import checkboxIcon from './assets/checkbox svg.svg';
 import notesIcon from './assets/notes svg.svg';
-import profileIcon from './assets/profile svg.svg';
 import dustbinIcon from './assets/dustbin.svg';
 import '../htmlImplementation/style/notes.css'
 import menuIcon from './assets/menu.svg';
-//import { Routes, Route, useNavigate } from 'react-router-dom';
+import profileIcon from './assets/profile svg.svg';
 
-//import '../htmlImplementation/style/footer.css'
-//import '../htmlImplementation/style/dashboard.css'
 
 function MyNotes (){
     const[notes,setNotes]= useState([]);
@@ -20,8 +17,7 @@ function MyNotes (){
     const [showSearch, setShowSearch] = useState(true);
     const [menuOpen, setMenuOpen] = useState(false);
 const toggleMenu = () => setMenuOpen(!menuOpen);
-//const [view, setView] = useState("notes"); // "notes" or "new"
-//const navigate = useNavigate();
+
 
   
  const handleTitleChange = (e) => setTitle(e.target.value);
