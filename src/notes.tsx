@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 
-import checkboxIcon from './assets/checkbox svg.svg';
+import checkboxIcon from './assets/checkbox svg.svg' ;
 import notesIcon from './assets/notes svg.svg';
 import dustbinIcon from './assets/dustbin.svg';
 import '../htmlImplementation/style/notes.css'
